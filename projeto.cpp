@@ -1,8 +1,3 @@
-//INTEGRANTES DO GRUPO:
-//Alexandre Marques Spinola Cardoso
-//Gustavo do Carmo Resende
-//Gustavo José Rodrigues Pereira
-
 //TEMA: Personagens de desenhos animados
 
 #include <iostream>
