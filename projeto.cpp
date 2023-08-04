@@ -1,3 +1,8 @@
+//INTEGRANTES DO GRUPO:
+//Alexandre Marques Spinola Cardoso
+//Gustavo do Carmo Resende
+//Gustavo José Rodrigues Pereira
+
 //TEMA: Personagens de desenhos animados
 
 #include <iostream>
@@ -84,19 +89,13 @@ int particionaNome (character personagens[], int p, int r) {
     int k;
     for (k = p; k < r; k++) {
         if (strcmp(minusculo(personagens[k].nome), minusculo(personagemPivo)) <= 0) {
-            swap(personagens[j].nome,personagens[k].nome);
-            swap(personagens[j].tituloDesenho,personagens[k].tituloDesenho);
-            swap(personagens[j].criador,personagens[k].criador);
-            swap(personagens[j].altura,personagens[k].altura);
-            swap(personagens[j].bio,personagens[k].bio);
+            swap(personagens[j], personagens[k]);
+            swap(personagens[j].identificador, personagens[k].identificador);
             j++; 
         } 
     }
-    swap(personagens[j].nome,personagens[r].nome);
-    swap(personagens[j].tituloDesenho,personagens[r].tituloDesenho);
-    swap(personagens[j].criador,personagens[r].criador);
-    swap(personagens[j].altura,personagens[r].altura);
-    swap(personagens[j].bio,personagens[r].bio);
+    swap(personagens[j], personagens[r]);
+    swap(personagens[j].identificador, personagens[r].identificador);
     return j; 
 }
 
@@ -120,19 +119,13 @@ int particionaAltura (character personagens[], int p, int r) {
     int k;
     for (k = p; k < r; k++) {
         if (personagens[k].altura <= personagemPivo) {
-            swap(personagens[j].nome,personagens[k].nome);
-            swap(personagens[j].tituloDesenho,personagens[k].tituloDesenho);
-            swap(personagens[j].criador,personagens[k].criador);
-            swap(personagens[j].altura,personagens[k].altura);
-            swap(personagens[j].bio,personagens[k].bio);
+            swap(personagens[j], personagens[k]);
+            swap(personagens[j].identificador, personagens[k].identificador);
             j++; 
         } 
     }
-    swap(personagens[j].nome,personagens[r].nome);
-    swap(personagens[j].tituloDesenho,personagens[r].tituloDesenho);
-    swap(personagens[j].criador,personagens[r].criador);
-    swap(personagens[j].altura,personagens[r].altura);
-    swap(personagens[j].bio,personagens[r].bio);
+    swap(personagens[j], personagens[r]);
+    swap(personagens[j].identificador, personagens[r].identificador);
     return j; 
 }
 
@@ -348,7 +341,7 @@ void pesquisarAltura(character personagens[], int tamanho){
 }
 
 
-//PROCEDIMNETO PARA ADICIONAR UM NOVO PERSONAGEM:
+//PROCEDIMENTO PARA ADICIONAR UM NOVO PERSONAGEM:
 
 void addPersonagem(character personagens[], int& tamanho, char cabecalho[], int& capacidade){
     char nomeAdd[30], tituloAdd[30], criadorAdd[80], bioAdd[500];
